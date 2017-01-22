@@ -3,7 +3,9 @@
 revision.py
 cache/
 floodsystem/__pycache__/
-
+tests/__pycache__/
+__pycache__/
+*/__pycache__/
 
 # OS generated files #
 ######################
