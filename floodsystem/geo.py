@@ -31,4 +31,4 @@ def stations_within_radius(stations, centre, radius):
     # get a list of stations with their respective stations from the centre
     sorted_stations = stations_by_distance(stations, centre);
 
-    return [ station for station in sorted_stations if station[1] <= radius ];
+    return [ station[0] for station in sorted_stations if station[1] <= radius ];
