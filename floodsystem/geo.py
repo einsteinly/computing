@@ -37,3 +37,19 @@ def rivers_with_station(stations):
         returns a set of rivers that have at least one monitoring station
     """
     return { station.river for station in stations };
+
+def stations_by_river(stations):
+    """
+        returns a dictionary that maps river names to a LIST of stations
+    """
+    dictionary = {};
+    rivers = rivers_with_station(stations);
+    for river in rivers:
+        #initialise list for storing the stations
+        dictionary[river] = [];
+        for station in stations:
+            #when the station's river matches, push into list
+            if station.river == river:
+                dictionary[river].append(station);
+
+    return dictionary;

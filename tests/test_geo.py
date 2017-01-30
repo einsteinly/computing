@@ -43,3 +43,18 @@ def test_rivers_with_station():
     #Test that the set contains string elements
     for river in result:
         assert isinstance(river, str);
+
+def test_stations_by_river():
+    result = geo.stations_by_river(stations);
+    #Test that the function runs without error
+    assert geo.stations_by_river(stations);
+
+    #Test that the function returns a dict
+    assert isinstance(result, dict);
+
+    #Test that the set contains station elements
+    for river,station_list in result.items():
+        assert isinstance(river, str);
+        assert isinstance(station_list, list);
+        for item in station_list:
+            assert isinstance(item, MonitoringStation);
