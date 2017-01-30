@@ -31,3 +31,15 @@ def test_stations_within_radius():
     #Test that items inside the list are instances of MonitoringStation
     for station in geo.stations_within_radius(stations, cam_coor, 10):
         assert isinstance(station, MonitoringStation)
+
+def test_rivers_with_station():
+    result = geo.rivers_with_station(stations);
+    #Test that the function runs without error
+    assert geo.rivers_with_station(stations);
+
+    #Test that the function returns a set
+    assert isinstance(result, set);
+
+    #Test that the set contains string elements
+    for river in result:
+        assert isinstance(river, str);

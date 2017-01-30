@@ -1,6 +1,5 @@
 """This module contains a collection of functions related to
 geographical data.
-
 """
 
 from .utils import sorted_by_key
@@ -32,3 +31,9 @@ def stations_within_radius(stations, centre, radius):
     sorted_stations = stations_by_distance(stations, centre);
 
     return [ station[0] for station in sorted_stations if station[1] <= radius ];
+
+def rivers_with_station(stations):
+    """
+        returns a set of rivers that have at least one monitoring station
+    """
+    return { station.river for station in stations };
