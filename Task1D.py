@@ -18,6 +18,26 @@ def run():
             break;
     print(sorted(rivers_restricted));
     
+    # Build dict of stations by river
+    stations_by_river_result = geo.stations_by_river(stations);
+    
+    # Compile stations in the required rivers
+    result = {};
+    result["River Aire"] = [];
+    result["River Cam"] = [];
+    result["Thames"] = [];
+    for station in stations_by_river_result["River Aire"]:
+        result["River Aire"].append(station.name);
+    for station in stations_by_river_result["River Cam"]:
+        result["River Cam"].append(station.name);
+    for station in stations_by_river_result["Thames"]:
+        result["Thames"].append(station.name);
+    
+    # Sort result and print
+    result["River Aire"] = sorted(result["River Aire"]);
+    result["River Cam"] = sorted(result["River Cam"]);
+    result["Thames"] = sorted(result["Thames"]);
+    print(result)
 
 
 if __name__ == "__main__":
