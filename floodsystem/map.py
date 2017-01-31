@@ -5,19 +5,19 @@ import plotly
 from . import geo
 from . import stationdata
 
-def plot_map_with_MornitoringStations(stations):
-    # scl = [ [0,"rgb(5, 10, 172)"],[0.35,"rgb(40, 60, 190)"],[0.5,"rgb(70, 100, 245)"],\
-    #     [0.6,"rgb(90, 120, 245)"],[0.7,"rgb(106, 137, 247)"],[1,"rgb(220, 220, 220)"] ]
+def plot_map_with_MornitoringStations(stations, _plot = True):
+    """
+        This function creates a new plot page and opens the page in a browser. If the opening of the browser fails, it returns the location of the file
+    """
 
     # Build map data for use
-
     map_data = dict(longitude=[], lattitude=[], text=[]);
     for station in stations:
         map_data["longitude"].append(station.coord[0]);
         map_data["lattitude"].append(station.coord[1]);
         map_data["text"].append(station.name);
 
-    # print(map_data);
+    #Configuration of plot.ly
     data = [ dict(
             type = 'scattergeo',
             # locationmode = 'UK',
@@ -68,4 +68,7 @@ def plot_map_with_MornitoringStations(stations):
         )
 
     fig = dict( data=data, layout=layout )
-    return plotly.offline.plot( fig, validate=False, filename='ia_computing_generated_map.html' )
+    if _plot:
+        return plotly.offline.plot( fig, validate=False, filename='ia_computing_generated_map.html' );
+    else:
+        return 1;
