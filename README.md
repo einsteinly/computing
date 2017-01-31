@@ -2,8 +2,6 @@
 Authors: Einsteinly (Xi Li) and S. Zhang
 Lab group: 158
 
-----
-
 ## Dependencies
 - plotly
 - haversine
