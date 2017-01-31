@@ -1,8 +1,12 @@
 # CUED Part IA Flood Warning System
+Authors: Einsteinly (Xi Li) and S. Zhang
+Lab group: 158
 
-This is the Part IA Lent Term computing activity at the Department of
-Engineering, University of Cambridge.
+----
 
-The activity is documented at
-http://cued-partia-flood-warning.readthedocs.io/. Fork this repository
-to start the activity.
+## Dependencies
+- plotly
+- haversine
+- requests
+- datetime
+- dateutil
