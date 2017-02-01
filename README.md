@@ -7,4 +7,4 @@ Lab group: 158
 - haversine
 - requests
 - datetime
-- dateutil
+- python-dateutil
