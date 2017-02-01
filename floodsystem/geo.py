@@ -4,7 +4,6 @@ geographical data.
 
 from .utils import sorted_by_key
 from haversine import haversine
-from .stationdata import build_station_list
 
 def stations_by_distance(stations, p):
     """This function takes two arguments: a list of stations and a coordinate p,
