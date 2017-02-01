@@ -2,6 +2,10 @@
 
 import pytest
 from floodsystem.station import MonitoringStation
+import floodsystem.stationdata as stationdata
+
+# Build station list
+stationdata.stations = build_station_list();
 
 
 def test_create_monitoring_station():
@@ -23,3 +27,14 @@ def test_create_monitoring_station():
     assert s.typical_range == trange
     assert s.river == river
     assert s.town == town
+
+def test_relative_water_level():
+    # Update water levels
+    stationdata.update_water_levels(stations);
+
+    # Test that the water levels are eiher float or None
+    for station in stations:
+        if station.relative_water_level() != None:
+            assert type(station.relative_water_level()) == float;
+        else:
+            assert station.relative_water_level() == None;
