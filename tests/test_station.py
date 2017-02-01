@@ -5,7 +5,7 @@ from floodsystem.station import MonitoringStation
 import floodsystem.stationdata as stationdata
 
 # Build station list
-stationdata.stations = build_station_list();
+stations = stationdata.build_station_list();
 
 
 def test_create_monitoring_station():
@@ -37,4 +37,4 @@ def test_relative_water_level():
         if station.relative_water_level() != None:
             assert type(station.relative_water_level()) == float;
         else:
-            assert station.relative_water_level() == None;
+            assert station.relative_water_level() == None;  

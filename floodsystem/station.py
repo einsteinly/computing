@@ -39,8 +39,10 @@ class MonitoringStation:
     def relative_water_level(self):
         '''
              returns the latest water level as a fraction of the typical range. if data is not available, None is returned
-        '''
-        if self.latest_level != None:
-            return self.latest_level / self.typical_range;
+        '''        
+        if self.typical_range != None and self.latest_level != None:
+            range_span = abs(self.typical_range[1] - self.typical_range[0]);
+            relative_level = ( self.latest_level - self.typical_range[0] ) / range_span;
+            return relative_level;
         else:
             return None;
