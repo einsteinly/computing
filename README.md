@@ -9,3 +9,7 @@ Lab group: 158
 - datetime
 - python-dateutil
 - matplotlib
+
+
+## Agenda Reminders
+- Add typical range plot lines to ``plot`` submodule
