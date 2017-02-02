@@ -8,3 +8,4 @@ Lab group: 158
 - requests
 - datetime
 - python-dateutil
+- matplotlib
