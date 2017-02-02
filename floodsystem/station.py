@@ -33,7 +33,8 @@ class MonitoringStation:
         d += "   coordinate:    {}\n".format(self.coord)
         d += "   town:          {}\n".format(self.town)
         d += "   river:         {}\n".format(self.river)
-        d += "   typical range: {}".format(self.typical_range)
+        d += "   typical range: {}\n".format(self.typical_range)
+        d += '   latest_level: {}'.format(self.latest_level);
         return d
 
     def relative_water_level(self):
@@ -42,7 +43,13 @@ class MonitoringStation:
         '''        
         if self.typical_range != None and self.latest_level != None:
             range_span = abs(self.typical_range[1] - self.typical_range[0]);
-            relative_level = ( self.latest_level - self.typical_range[0] ) / range_span;
-            return relative_level;
+
+            # latest_level can sometimes be an array
+            try:
+                relative_level = ( self.latest_level - self.typical_range[0] ) / range_span;
+            except:
+                relative_level = ( self.latest_level[0] - self.typical_range[0] ) / range_span;
+            finally:
+                return relative_level;
         else:
             return None;
