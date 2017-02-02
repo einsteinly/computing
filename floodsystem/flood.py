@@ -25,7 +25,7 @@ def stations_highest_rel_level(stations, N):
         returns a sorted list (descending order) of the N stations at which the water level, relative to the typical range, is highest
     '''
 
-    station_with_rel_level = [(station, station.relative_water_level()) for station in stations];
+    station_with_rel_level = [(station, station.relative_water_level()) for station in stations if station.relative_water_level() != None];
 
     #sort the stations in reverse order by water level
     station_with_rel_level = sorted(station_with_rel_level, key = lambda elem: elem[1], reverse = True);
