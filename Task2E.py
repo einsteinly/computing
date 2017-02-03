@@ -28,6 +28,12 @@ def run():
     # Plot required graphs
     plot.plot_water_levels(stations_by_rel_level, dates, levels);
 
+    # Additional operation: plot each station individually
+    for station in stations_by_rel_level:
+        temp_dates, temp_levels = datafetcher.fetch_measure_levels(station.measure_id,
+                                             dt=datetime.timedelta(days=dt));
+        plot.plot_water_levels(station, temp_dates, temp_levels);
+
 if __name__ == "__main__":
     print("*** Task 2E: CUED Part IA Flood Warning System ***")
 

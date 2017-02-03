@@ -1,9 +1,25 @@
-import plotly
-import plotly.graph_objs as go
+import pytest
+from floodsystem.station import MonitoringStation
+import floodsystem.stationdata as stationdata
+import floodsystem.plot as plot
+import floodsystem.datafetcher as datafetcher
+import datetime
 
-from datetime import datetime
+# Build station list
+stations = stationdata.build_station_list();
+# Update water levels
+stationdata.update_water_levels(stations);
 
-x = [datetime(year=2013, month=10, day=4), datetime(year=2013, month=11, day=5), datetime(year=2013, month=12, day=6)]
+# Find station 'Cam'
+for station in stations:
+    if station.name == 'Bedford':
+        station_cam = station
+        break
 
-data = [go.Scatter(x=x,y=[1, 3, 6])]
-plotly.offline.plot(data)
+# Fetch data over past 10 days
+dt = 10
+dates, levels = datafetcher.fetch_measure_levels(station_cam.measure_id,
+                                     dt=datetime.timedelta(days=dt))
+
+if __name__ == "__main__":
+	plot.plot_water_levels(station_cam, dates, levels);

@@ -18,11 +18,9 @@ for station in stations:
 
 # Fetch data over past 10 days
 dt = 10
-dates = [[]];
-levels = [[]];
-dates[0], levels[0] = datafetcher.fetch_measure_levels(station_cam.measure_id,
+dates, levels = datafetcher.fetch_measure_levels(station_cam.measure_id,
                                      dt=datetime.timedelta(days=dt))
 
 def test_plot_water_levels():
-	#Test that the function runs without error to give the required plot
-	assert plot.plot_water_levels([station_cam], dates, levels);
+	#Test that the function runs without error to give the required plot for a single function
+	assert plot.plot_water_levels(station_cam, dates, levels);
