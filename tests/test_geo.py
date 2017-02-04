@@ -58,3 +58,17 @@ def test_stations_by_river():
         assert isinstance(station_list, list);
         for item in station_list:
             assert isinstance(item, MonitoringStation);
+
+def test_rivers_by_station_number():
+    result = geo.rivers_by_station_number(stations, 10);
+    #Test that the functions runs without error
+    assert geo.rivers_by_station_number(stations, 10);
+
+    #Test that the functions returns a list
+    assert isinstance(result, list);
+
+    #Test that items inside the list are tuples of string and integers
+    for item in result:
+        assert isinstance(item, tuple);
+        assert isinstance(item[0], str)
+        assert isinstance(item[1], int)
