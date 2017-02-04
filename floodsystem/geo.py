@@ -4,6 +4,7 @@ geographical data.
 
 from .utils import sorted_by_key
 from haversine import haversine
+import operator
 
 def stations_by_distance(stations, p):
     """This function takes two arguments: a list of stations and a coordinate p,
@@ -52,3 +53,29 @@ def stations_by_river(stations):
                 dictionary[river].append(station);
 
     return dictionary;
+
+def rivers_by_station_number(stations, N):
+    """
+        returns a list of tuples sorted by the number of stations, including N rivers with the greatest number of stations.
+    """
+    sorted_rivers = [];
+    rivers_and_its_stations = stations_by_river(stations)
+    #get a dictionary of rivers and its stations
+    for river,stations_of_river in rivers_and_its_stations.items():
+        for station in rivers_and_its_stations[river]:
+            station = station.name
+            #replace station data by station name only
+        rivers_and_its_stations[river] = len(rivers_and_its_stations[river])
+    #replace the values by the number of stations
+    rivers_and_its_stations = sorted(rivers_and_its_stations.items(), key=operator.itemgetter(1), reverse=True)
+    #get a list of tuples sorted by decreasing number of stations
+    for i in range(N):
+        sorted_rivers.append((rivers_and_its_stations[i][0],rivers_and_its_stations[i][1]))
+    #add the first N stations to the list
+    for i in range(N,len(rivers_and_its_stations)):
+        if rivers_and_its_stations[N][1] == rivers_and_its_stations[i][1]:
+            sorted_rivers.append((rivers_and_its_stations[i][0],rivers_and_its_stations[i][1]))
+            #add the rivers with same station number     
+        else:
+            break
+    return sorted_rivers;
