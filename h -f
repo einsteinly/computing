@@ -1,0 +1,265 @@
+[33mcommit 6594ef1c1ce67e8e590ca231e24c5a0649f01612[m
+Merge: 83d9522 9ee6829
+Author: Shengyuan Zhang <sz346@cam.ac.uk>
+Date:   Sat Feb 4 12:50:31 2017 +0000
+
+    Merge remote-tracking branch 'refs/remotes/einsteinly/master'
+
+[33mcommit 83d952248b37f5f251debe1bab7dfe03d3beaec9[m
+Author: Shengyuan Zhang <sz346@cam.ac.uk>
+Date:   Sat Feb 4 12:45:54 2017 +0000
+
+    /
+
+[33mcommit 4bee6afc4f55c404a46c1306e7c693e8083fb818[m
+Author: Shengyuan Zhang <sz346@cam.ac.uk>
+Date:   Sat Feb 4 12:45:37 2017 +0000
+
+    complete task 1e
+
+[33mcommit 3d16981ea2353ce234ff0eaf714e1429ad5226ed[m
+Author: Shengyuan Zhang <sz346@cam.ac.uk>
+Date:   Sat Feb 4 12:45:16 2017 +0000
+
+    complete task 1e
+
+[33mcommit cf16e537dd9f618b4f7c0b3aea31c4ec374440e1[m
+Author: Shengyuan Zhang <sz346@cam.ac.uk>
+Date:   Sat Feb 4 12:43:10 2017 +0000
+
+    Complete tast 1e
+
+[33mcommit 9ee682942acbe7476f378850e5a8b2da53c0e0ee[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Sat Feb 4 11:02:35 2017 +0000
+
+    Added link to instructions
+
+[33mcommit ccd735867f69b8f238352b9eb55e444d904322fd[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Fri Feb 3 17:42:18 2017 +0000
+
+    updated gitignore to ignore generated html files
+
+[33mcommit d1ae9939324935b17520469dfa9a7dc0e1fdbea7[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Fri Feb 3 17:41:32 2017 +0000
+
+    cleaned up directory by removing generated html plots
+
+[33mcommit c9a97705a208685b34c4238d7cad1c470a002a0a[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Fri Feb 3 17:39:01 2017 +0000
+
+    updated readme: removed agendum which has been completed
+
+[33mcommit 0e2a584fdbfcdb1e191259df12e1a6f90b1cc18c[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Fri Feb 3 17:32:27 2017 +0000
+
+    completed Task 2E
+
+[33mcommit bff6b800124ed64c9f775f663e131ca7353a1fbe[m
+Merge: d1aca30 959fd1e
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Fri Feb 3 17:03:36 2017 +0000
+
+    Merge branch '2E' of https://github.com/einsteinly/computing
+
+[33mcommit d1aca3042c7ecb6f3ab3b9e2c83474fcf418f36a[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Thu Feb 2 16:23:54 2017 +0000
+
+    corrected readme
+
+[33mcommit 959fd1eadae731c695492a47fd117b9a3eb3da90[m
+Author: einsteinly <xl404@tw904.eng.cam.ac.uk>
+Date:   Thu Feb 2 13:06:37 2017 +0000
+
+    added Task2E.py but in INCOMPLETE
+
+[33mcommit 354a428d80d069d01d62701a83cb0bf50d67470c[m
+Author: einsteinly <xl404@tw904.eng.cam.ac.uk>
+Date:   Thu Feb 2 13:06:22 2017 +0000
+
+    added plotting functions and tests
+
+[33mcommit ce27351c64a930f9fcc472682ddd16feea24ffa7[m
+Author: einsteinly <xl404@tw904.eng.cam.ac.uk>
+Date:   Thu Feb 2 13:06:00 2017 +0000
+
+    updated readme to remind myself of the things that are left to be done
+
+[33mcommit a80f7f4c11c9071a2b550ef5e43645794ac306f3[m
+Author: einsteinly <xl404@tw904.eng.cam.ac.uk>
+Date:   Thu Feb 2 12:26:14 2017 +0000
+
+    half-way
+
+[33mcommit 3b38af97629e880115da486319996aa4ada0fda1[m
+Author: einsteinly <xl404@tw904.eng.cam.ac.uk>
+Date:   Thu Feb 2 11:48:49 2017 +0000
+
+    added Task2C.py (complete)
+
+[33mcommit 6a5a0f2a4d2aafb6db96741374dea0b762dad617[m
+Author: einsteinly <xl404@tw904.eng.cam.ac.uk>
+Date:   Thu Feb 2 11:48:18 2017 +0000
+
+    resolved bug with stations_highest_rel_level and updated test
+
+[33mcommit 308dd5c5f27438ccac9657f7391279cde2ec5611[m
+Author: X. Li <xl404@tw904.eng.cam.ac.uk>
+Date:   Thu Feb 2 11:47:07 2017 +0000
+
+    resolved bug with relative_water_level function as latest_level might sometimes be a list
+
+[33mcommit e3c4012f0bc7ba392f96b3545603f6850569c8ae[m
+Author: X. Li <xl404@tw904.eng.cam.ac.uk>
+Date:   Thu Feb 2 11:28:43 2017 +0000
+
+    added stations_highest_rel_level function
+
+[33mcommit ba43125b61c3557819f95a818d10ba8532594555[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Wed Feb 1 15:51:48 2017 +0000
+
+    updated readme.md
+
+[33mcommit 358b6266fba9aae362856251ba807fe909aa5565[m
+Author: X. Li <xl404@tw111.eng.cam.ac.uk>
+Date:   Wed Feb 1 12:49:11 2017 +0000
+
+    completed task2B
+
+[33mcommit 5a8fe52dbba11368e84f8a62bd923228562d3848[m
+Author: X. Li <xl404@tw111.eng.cam.ac.uk>
+Date:   Wed Feb 1 12:45:37 2017 +0000
+
+    added stations_level_over_threshold function and test
+
+[33mcommit a94a6b7e18785d4e000148d329b371c103d788fd[m
+Author: X. Li <xl404@tw111.eng.cam.ac.uk>
+Date:   Wed Feb 1 12:34:09 2017 +0000
+
+    cleaned up geo.py
+
+[33mcommit 0b038a75fcbb2adbae7cdb7fdcc892de93489d8b[m
+Author: X. Li <xl404@tw111.eng.cam.ac.uk>
+Date:   Wed Feb 1 12:30:53 2017 +0000
+
+    resolved bug with relative_water_level method
+
+[33mcommit dabf15232b1e208136a35cab9b098ef117166559[m
+Author: X. Li <xl404@tw111.eng.cam.ac.uk>
+Date:   Wed Feb 1 12:10:12 2017 +0000
+
+    added function for 2B
+
+[33mcommit 7dc27be2257e59de991aab7c467f4b03463cdeae[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Tue Jan 31 21:00:52 2017 +0000
+
+    updated .gitignore to ignore credential files
+
+[33mcommit 830dfe0f074c957e4f77ad40e18a74f1e55d7c80[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Tue Jan 31 20:59:40 2017 +0000
+
+    beautified README
+
+[33mcommit 47c43258f2fbaa89f70a26880214ed96bf793992[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Tue Jan 31 20:58:05 2017 +0000
+
+    added docstring and test
+
+[33mcommit 3f27608c428f26e45ff91ad19920522436b9ffa9[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Tue Jan 31 20:49:20 2017 +0000
+
+    updated README.md
+
+[33mcommit 373e21bf06d213b89fbca524b992ccd9f046ee2b[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Tue Jan 31 20:47:12 2017 +0000
+
+    Added map module and map plotting functions
+
+[33mcommit 5f5f5b2d66379e068fa0e2b47eea7681f1813e26[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Mon Jan 30 10:28:43 2017 +0000
+
+    completed task1D
+
+[33mcommit 81af74b3284274213a4059fccc1c7ee02ca65c48[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Mon Jan 30 10:22:34 2017 +0000
+
+    added stations_by_river function and test
+
+[33mcommit f41b4f103ba774196563ab938fe790e338f8ca7e[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Mon Jan 30 10:17:30 2017 +0000
+
+    added demo programme for rivers_with_station function
+
+[33mcommit 8e21d7171f1f00a742256f1616b39aa45e4451e5[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Mon Jan 30 10:11:15 2017 +0000
+
+    added rivers_with_station function and its test
+
+[33mcommit b2e6e33021bb94d373e56188bdc69a27317ffe4d[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Sun Jan 29 21:50:31 2017 +0000
+
+    resolved bug in geo.py
+
+[33mcommit 835529fbc2f41eff6983d9bce1f49252e04b1b5b[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Sun Jan 29 21:50:08 2017 +0000
+
+    improved test file to include tests of instances
+
+[33mcommit ea244d4985b979ccf04fecb75ff584495fdbfcb8[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Sun Jan 29 21:49:33 2017 +0000
+
+    completed Task1C file
+
+[33mcommit 2ac569be7e91148f3dc95c460d1b49198b9fc897[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Sun Jan 29 21:42:06 2017 +0000
+
+    corrected typo mistake
+
+[33mcommit 905ccabbaaaba9f4c0f60c95c46805325a8ff0ae[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Sun Jan 29 21:39:47 2017 +0000
+
+    added stations_within_radius function and tests
+
+[33mcommit 363d0e23246d59903ad50ac70bfe9e5ffbcc712c[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Sun Jan 22 12:01:59 2017 +0000
+
+    Required Task1B.py demonstration file added
+
+[33mcommit d008c217f1569be3915cf1a140e2286fbff919d8[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Sun Jan 22 11:50:45 2017 +0000
+
+    Re-organised project structure and added function stations_by_distance() + its test
+
+[33mcommit 3a735ca2197b462a55b4bd675b082395add15762[m
+Author: einsteinly <lieinsteinxi@gmail.com>
+Date:   Sat Jan 21 22:25:28 2017 +0000
+
+    added .gitignore
+
+[33mcommit fe9ab1d888447fbfd0994fe29a1fefccd121174b[m
+Author: Garth N. Wells <gnw20@cam.ac.uk>
+Date:   Mon Jan 16 15:45:37 2017 +0000
+
+    Add starter files.
