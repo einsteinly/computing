@@ -3,6 +3,7 @@
 import pytest
 from floodsystem.station import MonitoringStation
 import floodsystem.stationdata as stationdata
+import floodsystem.station as stations
 
 # Build station list
 stations = stationdata.build_station_list();
@@ -38,3 +39,18 @@ def test_relative_water_level():
             assert type(station.relative_water_level()) == float;
         else:
             assert station.relative_water_level() == None;  
+
+def test_inconsistent_typical_range_stations():
+    #creat a list of inconsistent station
+    inconsistent_list = stations.inconsistent_typical_range_stations(stations)
+    
+    #test that the output is a list
+    assert isinstance(inconsistent_list, list);
+
+    #test that items in the list are inconsistent stations names
+    for item in inconsistent_list:
+        assert isinstance(item, str)
+        assert MonitoringStation.typical_range_consistent(item) == False
+        
+
+    
