@@ -53,3 +53,31 @@ class MonitoringStation:
                 return relative_level;
         else:
             return None;
+    
+    def typical_range_consistent(self):
+        '''
+            return ture if the typical range of station is consistent, return false if not consistent or data not available.
+        '''
+        if self.typical_range == None:
+            return False
+            #return false if data not avaiable
+        elif self.typical_range[0] < self.typical_range[1]:
+            #return true if range is consistent
+            return True
+        else:
+            return False
+            #for other situation, return false
+
+def inconsistent_typical_range_stations(stations):
+    """
+        ruturns a list of inconsistent stations.
+    """
+    inconsistent_list = []
+    for station in stations:
+        if MonitoringStation.typical_range_consistent(station) == False:
+            inconsistent_list.append(station.name)
+            #add the station to the list if the consistent test failed
+    inconsistent_list = sorted(inconsistent_list)
+    #sort the inconsistent list
+    return inconsistent_list
+            
