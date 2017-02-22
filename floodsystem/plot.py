@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta
 import plotly
 import plotly.graph_objs as go
+import floodsystem.analysis as analysis
+import matplotlib.pyplot as plt
 
 
 def plot_water_levels(stations, dates, levels):
@@ -38,3 +40,12 @@ def plot_water_levels(stations, dates, levels):
 		showlegend = True);
 	
 	return plotly.offline.plot(dict(data=data,layout=layout), filename=filename);
+
+def plot_water_level_with_fit(station, dates, levels, p):
+    """ plots the water level data and the best-fit polynomial """
+    poly = analysis.polyfit(dates, levels, p)
+    plt.plot(dates, poly(dates))
+
+    # Display plot
+    plt.show()
+    
