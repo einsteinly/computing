@@ -20,7 +20,12 @@ for station in stations:
 dt = 10
 dates, levels = datafetcher.fetch_measure_levels(station_cam.measure_id,
                                      dt=datetime.timedelta(days=dt))
+p=4
 
 def test_plot_water_levels():
 	#Test that the function runs without error to give the required plot for a single function
 	assert plot.plot_water_levels(station_cam, dates, levels);
+
+def test_plot_water_level_with_fit():
+      #Test that the function runs without error to give the required plot for a single function
+      assert plot.plot_water_level_with_fit(station, dates, levels, p)
