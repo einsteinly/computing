@@ -14,15 +14,30 @@ import datetime
 def run():
     # Build station list
     stations = stationdata.build_station_list();
+    stationdata.update_water_levels(stations);
 
     #create the list of stations of 10 highest level
-
-    stations = flood.stations_highest_rel_level(stations, 10)
+    stations = flood.stations_highest_rel_level(stations, 5)
+    
 
     for station in stations:
-        dates, levels = datafetcher.fetch_measure_levels(station.measure_id,
+        dates=[]
+        levels=[]
+        temp_dates=[]
+        temp_levels=[]
+        temp_dates, temp_levels = datafetcher.fetch_measure_levels(station.measure_id,
                                          dt=datetime.timedelta(days=2))
-        plot.plot_water_level_with_fit(station, dates, levels, 4)
+        for date in temp_dates:
+            now = datetime.datetime.utcnow()
+            date = (date.replace(tzinfo=None) - now).seconds
+            dates.append(date)
+        for level in temp_levels:
+            levels.append(level)
+        if dates != []:
+            plot.plot_water_level_with_fit(station, dates, levels, 4)
+        
+
+
     
     
 if __name__ == "__main__":
