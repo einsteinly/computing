@@ -22,14 +22,14 @@ def run():
 
     # print result
     for item in result:
-        if item.relative_water_level() > 10:
-            print(item.town + '  severe risk')
-        elif item.relative_water_level() > 1.5:
+        if item.relative_water_level() > 10 and item.town != None:
+            print(item.town  + '  severe risk')
+        elif item.relative_water_level() > 1.5 and item.town != None:
             print(item.town + '  high risk')
-        elif item.relative_water_level() > 1:
-            print(item.town + '  moderate risk')
-        else:
-            print(item.town + '  low risk');
+        elif item.relative_water_level() > 1 and item.town != None:
+            print(item.town  + ' moderate risk')
+        elif item.town != None:
+            print(item.town + '  low risk')
 
     
 
