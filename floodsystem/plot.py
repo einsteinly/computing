@@ -48,8 +48,9 @@ def plot_water_level_with_fit(station, dates, levels, p):
     poly = analysis.polyfit(dates, levels, p)
     
     
+    
     plt.plot(dates, poly(dates))
-    plt.plot(dates, levels)
+    plt.plot(dates,levels)
 
     # Display plot
     plt.show()

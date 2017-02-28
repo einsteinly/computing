@@ -10,6 +10,7 @@ import floodsystem.plot as plot
 import floodsystem.datafetcher as datafetcher
 import floodsystem.stationdata as stationdata
 import datetime
+import matplotlib.pyplot as plt
 
 def run():
     # Build station list
@@ -29,12 +30,13 @@ def run():
                                          dt=datetime.timedelta(days=2))
         for date in temp_dates:
             now = datetime.datetime.utcnow()
-            date = (date.replace(tzinfo=None) - now).seconds
+            date = (date.replace(tzinfo=None) - now).total_seconds()
             dates.append(date)
         for level in temp_levels:
             levels.append(level)
         if dates != []:
             plot.plot_water_level_with_fit(station, dates, levels, 4)
+            
         
 
 
