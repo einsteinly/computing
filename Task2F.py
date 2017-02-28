@@ -22,20 +22,7 @@ def run():
     
 
     for station in stations:
-        dates=[]
-        levels=[]
-        temp_dates=[]
-        temp_levels=[]
-        temp_dates, temp_levels = datafetcher.fetch_measure_levels(station.measure_id,
-                                         dt=datetime.timedelta(days=2))
-        for date in temp_dates:
-            now = datetime.datetime.utcnow()
-            date = (date.replace(tzinfo=None) - now).total_seconds()
-            dates.append(date)
-        for level in temp_levels:
-            levels.append(level)
-        if dates != []:
-            plot.plot_water_level_with_fit(station, dates, levels, 4)
+            plot.plot_water_level_with_fit(station,4)
             
         
 

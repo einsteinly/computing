@@ -28,4 +28,4 @@ def test_plot_water_levels():
 
 def test_plot_water_level_with_fit():
       #Test that the function runs without error to give the required plot for a single function
-      assert plot.plot_water_level_with_fit(station, dates, levels, p)
+      assert plot.plot_water_level_with_fit(station_cam, dates, levels, p)

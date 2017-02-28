@@ -1,9 +1,12 @@
-from datetime import datetime, timedelta
+import datetime
 import plotly
 import plotly.graph_objs as go
 import floodsystem.analysis as analysis
 import matplotlib.pyplot as plt
 import numpy as np
+import floodsystem.stationdata as stationdata
+import floodsystem.datafetcher as datafetcher
+
 
 
 def plot_water_levels(stations, dates, levels):
@@ -42,16 +45,28 @@ def plot_water_levels(stations, dates, levels):
 	
 	return plotly.offline.plot(dict(data=data,layout=layout), filename=filename);
 
-def plot_water_level_with_fit(station, dates, levels, p):
+def plot_water_level_with_fit(station, p):
+    stationdata.update_water_levels([station])
+    dates=[]
+    levels=[]
+    temp_dates=[]
+    temp_levels=[]
+    temp_dates, temp_levels = datafetcher.fetch_measure_levels(station.measure_id,
+                                         dt=datetime.timedelta(days=2))
+    for date in temp_dates:
+        now = datetime.datetime.utcnow()
+        date = (date.replace(tzinfo=None) - now).total_seconds()
+        dates.append(date)
+    for level in temp_levels:
+            levels.append(level)
+    if dates != []:
+        poly = analysis.polyfit(dates, levels, p)
     
     
-    poly = analysis.polyfit(dates, levels, p)
     
-    
-    
-    plt.plot(dates, poly(dates))
-    plt.plot(dates,levels)
+        plt.plot(dates, poly(dates))
+        plt.plot(dates,levels)
 
     # Display plot
-    plt.show()
+        plt.show()
     
