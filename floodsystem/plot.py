@@ -10,40 +10,40 @@ import floodsystem.datafetcher as datafetcher
 
 
 def plot_water_levels(stations, dates, levels):
-	'''
-		displays a plot of the water level data against time for a station, and include on the plot lines for the typical low and high levels
-		arguments: list of stations, dates: list of arrays of date objects, levels: list of arrays of water levels
+    '''
+        displays a plot of the water level data against time for a station, and include on the plot lines for the typical low and high levels
+        arguments: list of stations, dates: list of arrays of date objects, levels: list of arrays of water levels
 
-		if a single set of station, dates and levels are passed into the function, it will plot only that station and its ranges
-	'''
-	data = [];
+        if a single set of station, dates and levels are passed into the function, it will plot only that station and its ranges
+    '''
+    data = [];
 
-	#Default file name
-	filename = "water levels plot.html";
+    #Default file name
+    filename = "water levels plot.html";
 
-	if type(stations) == list:
-		# if the input parameters include more than one set of data
+    if type(stations) == list:
+        # if the input parameters include more than one set of data
 
-		for key, station in enumerate(stations):
-			data.append(go.Scatter(x=dates[key],y=levels[key], name=station.name) );
+        for key, station in enumerate(stations):
+            data.append(go.Scatter(x=dates[key],y=levels[key], name=station.name) );
 
-	else:
-		# Otherwise plot only one station and its ranges
-		data.append(go.Scatter(x=dates,y=levels, name=stations.name));
-		#Plot the ranges if they are defined
-		if stations.typical_range != None:
-			data.append(go.Scatter(x=dates,y=[stations.typical_range[0]]*len(dates), name="Typical low range") );
-			data.append(go.Scatter(x=dates,y=[stations.typical_range[1]]*len(dates), name="Typical high range") );
+    else:
+        # Otherwise plot only one station and its ranges
+        data.append(go.Scatter(x=dates,y=levels, name=stations.name));
+        #Plot the ranges if they are defined
+        if stations.typical_range != None:
+            data.append(go.Scatter(x=dates,y=[stations.typical_range[0]]*len(dates), name="Typical low range") );
+            data.append(go.Scatter(x=dates,y=[stations.typical_range[1]]*len(dates), name="Typical high range") );
 
-		#name the file the name of the station
-		filename = stations.name;
+        #name the file the name of the station
+        filename = stations.name;
 
-	layout = dict( title = 'Water Levels Plot',
-		xaxis = dict(title='Dates'),
-		yaxis = dict(title='Water level'),
-		showlegend = True);
-	
-	return plotly.offline.plot(dict(data=data,layout=layout), filename=filename);
+    layout = dict( title = 'Water Levels Plot',
+        xaxis = dict(title='Dates'),
+        yaxis = dict(title='Water level'),
+        showlegend = True);
+    
+    return plotly.offline.plot(dict(data=data,layout=layout), filename=filename);
 
 def plot_water_level_with_fit(station, p):
     stationdata.update_water_levels([station])
@@ -69,4 +69,5 @@ def plot_water_level_with_fit(station, p):
 
     # Display plot
         plt.show()
+    return True
     
